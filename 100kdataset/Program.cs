@@ -1,12 +1,16 @@
-using Controller;
-using View;
+using MovieLensApp.Controller;
+using System;
 
-class Program
+namespace MovieLensApp
 {
-    static void Main()
+    class Program
     {
-        var view = new ConsoleInterface();
-        var controller = new MainController(view);
-        controller.Run();
+        static void Main(string[] args)
+        {
+            AppController app = new();
+            app.Run();
+            Console.WriteLine("Reports generated successfully.");
+            Console.ReadLine();
+        }
     }
 }
